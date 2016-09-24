@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class AccountInfo extends AppCompatActivity {
 
+    public static String nameA, emailA;
     private TextView namedisp;
     private TextView emaildisp;
 
@@ -25,12 +26,8 @@ public class AccountInfo extends AppCompatActivity {
         namedisp = (TextView) findViewById(R.id.user_name2);
         emaildisp = (TextView) findViewById(R.id.user_email2);
 
-        Intent i = getIntent();
-        String name, email;
-        name = i.getStringExtra("p_name");   //TODO fix this null value problem
-        email = i.getStringExtra("p_email");
-        Log.d("AUTH","NAME ACCEPTED "+name);
-        namedisp.setText(name);
-        emaildisp.setText(email);
+        Log.d("AUTH","NAME ACCEPTED "+nameA);
+        namedisp.setText(nameA);
+        emaildisp.setText(emailA);
     }
 }
